@@ -6,7 +6,7 @@ import Hero from '@/components/Hero'
 
 export default function Home() {
   return (
-    <main className="bg-[#1a120b] text-white">
+    <main className="flex flex-col">
       <Hero />
       {/* <Gallery />
       <About />

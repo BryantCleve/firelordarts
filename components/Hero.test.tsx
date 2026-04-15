@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
-import Home from '@/app/page'
+import Hero from '@/components/Hero'
 
 test('renders brand title', () => {
-    render(<Home />)
-    expect(screen.getByText("FirelordArts")).toBeInTheDocument()
+  render(<Hero />)
+  expect(screen.getByText("Firelord Arts")).toBeInTheDocument()
 })
