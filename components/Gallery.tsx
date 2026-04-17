@@ -53,7 +53,7 @@ export default function Gallery() {
             <div
               key={item.id}
               className={`
-                relative group
+                relative group shadow-2xl
                 ${isOffset ? 'md:translate-y-1' : ''}
                 ${i === 0 ? 'md:col-span-2' : ''}
                 transition-transform duration-300
