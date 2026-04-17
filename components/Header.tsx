@@ -22,10 +22,10 @@ export default function Header() {
   return (
     <header
       className={`
-        fixed top-0 left-0 w-full z-50 bg-gradient-to-b bg-gradient-to-b from-black/20 via-black/10 to-orange-900/10
+        fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black/20 via-black/10 to-orange-900/10
         transition-[height,background-color,backdrop-filter] duration-300 ease-in-out
-        bg-bg-elevated
-        ${scrolled ? 'h-14 backdrop-blur-md' : 'h-24'}
+        bg-bg-elevated  backdrop-blur-md'
+        ${scrolled ? 'h-14' : 'h-20'}
       `}
     >
       <div className="w-full h-full flex items-center justify-between px-12 relative">
@@ -34,9 +34,9 @@ export default function Header() {
         <div className="flex justify-start">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="group cursor-pointer p-2 rounded-md hover:bg-white/0 transition"
+            className="group cursor-pointer p-2 rounded-md hover:bg-white/0"
           >
-            <Menu className="w-7.5 h-7.5 group-hover:text-orange-400 transition" />
+            <Menu className="w-7.5 h-7.5 group-hover:text-orange-400 transition-colors" />
           </button>
         </div>
 
@@ -44,7 +44,7 @@ export default function Header() {
         <div
           className={`
             fixed top-0 left-0 h-full w-72 bg-wood z-40
-            transform transition duration-300 ease-in-out
+            transform transition-transform duration-300 ease-in-out
             shadow-[8px_0_20px_rgba(0,0,0,0.25)]
             ${menuOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-75'}
           `}
@@ -105,8 +105,8 @@ export default function Header() {
                 : 'opacity-100 translate-y-0 max-h-10 scale-100 pointer-events-auto'}
             `}
           >
-            <h2 className="text-xl font-bold tracking-widest text-text-muted">
-              Handcrafted Decor
+            <h2 className="text-sm tracking-widest text-text-muted mt-0.5">
+              {"Handcrafted Decor".toLocaleUpperCase()}
             </h2>
           </div>
         </Link>

@@ -2,7 +2,7 @@
 
 export default function Gallery() {
   const items = [
-    { id: 1, src: '/images/IMG_5696.jpg', title: 'Piece 1' },
+    { id: 1, src: '/images/aloha.jpg', title: 'Piece 1' },
     { id: 2, src: '/images/IMG_4258.jpg', title: 'Piece 2' },
     { id: 3, src: '/images/IMG_4826.jpg', title: 'Piece 3' },
     { id: 4, src: '/images/IMG_4942.jpg', title: 'Piece 4' },
