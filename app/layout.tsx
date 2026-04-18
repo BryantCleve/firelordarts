@@ -17,15 +17,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="text-text-primary antialiased">
-        <div className="relative min-h-screen">
+        <div className="relative min-h-svh">
       
-          <div className="fixed inset-0 -z-10">
+          <div className="fixed top-0 left-0 w-full inset-0 -z-10">
             
             {/* Background image */}
             <img
               src="/images/background.jpg"
               alt="background"
-              className="w-full h-full object-cover"
+              className="w-full h-svh object-cover"
             />
 
             {/* Dark base overlay (keeps readability) */}

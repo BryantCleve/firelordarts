@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <header
       className={`
-        fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black/20 via-black/10 to-orange-900/10
+        fixed top-0 left-0 w-full z-50 bg-linear-to-b from-black/20 via-black/10 to-orange-900/10
         transition-[height,background-color,backdrop-filter] duration-100 ease-in-out
         bg-bg-elevated  backdrop-blur-md'
         ${scrolled ? 'h-16 md:h-14' : 'h-16 md:h-20'}
@@ -32,7 +32,7 @@ export default function Header() {
       <div className="w-full h-full flex items-center justify-between mx-auto px-5 md:px-12">
         
         {/* Menu Button */}
-        <div className="flex items-center flex-shrink-0">
+        <div className="flex items-center shrink-0">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="group cursor-pointer p-2 rounded-md hover:bg-white/0"

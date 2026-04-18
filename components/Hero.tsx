@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="relative w-full pt-[25vh] h-[50vh] md:pt-0 md:h-[100vh] flex items-center justify-center">
+    <section className="relative w-full pt-[25vh] h-[50vh] md:pt-0 md:h-svh flex items-center justify-center">
       
       {/* Background Image */}
       <img
@@ -15,7 +15,7 @@ export default function Hero() {
 
       {/* Dark + Fire Gradient Overlay */}
       <div className="absolute inset-0 bg-black/10" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-orange-900/32" />
+      <div className="absolute inset-0 bg-linear-to-t from-black via-black/20 to-orange-900/32" />
 
       {/* Content */}
       {/* <div className="relative text-center px-4 max-w-5xl">
@@ -64,9 +64,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-2xs md:text-xl text-text-muted tracking-widest drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]">
-            {'NEW & UNIQUE PIECES '}
+            {'New & unique pieces '.toLocaleUpperCase()}
             {/* <br className="md:hidden" /> */}
-            {'ALWAYS IN THE MAKING'}
+            {'always in the making'.toLocaleUpperCase()}
           </p>
         </div>
 
