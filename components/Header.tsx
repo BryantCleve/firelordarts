@@ -7,25 +7,26 @@ import { Menu, X, Mail, ShoppingBag } from 'lucide-react'
 import BrandIcon from './BrandIcon'
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false)
+  // const [scrolled, setScrolled] = useState(false)
+  const scrolled = false
   const [menuOpen, setMenuOpen] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrolled(window.scrollY > 20)
+  //   }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  //   window.addEventListener('scroll', handleScroll)
+  //   return () => window.removeEventListener('scroll', handleScroll)
+  // }, [])
 
   return (
     <header
       className={`
         fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black/20 via-black/10 to-orange-900/10
-        transition-[height,background-color,backdrop-filter] duration-300 ease-in-out
+        transition-[height,background-color,backdrop-filter] duration-100 ease-in-out
         bg-bg-elevated  backdrop-blur-md'
-        ${scrolled ? 'h-16 md:h-14' : 'h-22 md:h-20'}
+        ${scrolled ? 'h-16 md:h-14' : 'h-16 md:h-20'}
       `}
     >
       <div className="w-full h-full flex items-center justify-between mx-auto px-5 md:px-12">
@@ -95,7 +96,7 @@ export default function Header() {
             <h1
               className={`
                 font-bold tracking-wider leading-none transition-all duration-300
-                ${scrolled ? 'text-2xl md:text-3xl' : 'text-3xl md:text-4xl'}
+                ${scrolled ? 'text-2xl md:text-3xl' : 'text-2xl md:text-4xl'}
               `}
             >
               FireLord Arts

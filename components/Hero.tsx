@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="relative w-full pt-[25vh] h-[75vh] md:pt-0 md:h-[100vh] flex items-center justify-center">
+    <section className="relative w-full pt-[25vh] h-[50vh] md:pt-0 md:h-[100vh] flex items-center justify-center">
       
       {/* Background Image */}
       <img
@@ -56,9 +56,9 @@ export default function Hero() {
       <div className="relative w-full h-full flex items-center justify-center">
 
         {/* TEXT (independent position) */}
-        <div className="absolute top-[-14%] md:top-[18%] text-center px-4 max-w-5xl">
+        <div className="absolute top-[-60%] md:top-[18%] text-center px-4 max-w-5xl">
           <h1 className="text-3xl md:text-5xl font-bold mb-3 tracking-wide leading-tight drop-shadow-[0_2px_6px_rgba(0,0,0,0.7)]">
-            Designed, Carved, Textured by Hand.
+            Designed, Carved, Textured by Hand
           </h1>
 
           <p className="text-xs md:text-xl text-text-muted tracking-widest drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]">

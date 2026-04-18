@@ -40,7 +40,7 @@ export default function GalleryPage() {
   ])
 
   return (
-    <main className="max-w-6xl mx-auto px-4 pt-10 md:pt-8">
+    <main className="max-w-6xl mx-auto px-4 pt-4 md:pt-8">
       
       <h1 className="text-2xl md:text-5xl font-bold text-center mb-2">
         Gallery
