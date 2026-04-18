@@ -110,7 +110,7 @@ export default function Header() {
                   : 'opacity-100 translate-y-0 max-h-10 scale-100 pointer-events-auto'}
               `}
             >
-              <h2 className="text-xs md:text-sm tracking-widest text-text-muted mt-0.5">
+              <h2 className="text-2xs md:text-sm tracking-widest text-text-muted mt-0.5">
                 {"Handcrafted Decor".toLocaleUpperCase()}
               </h2>
             </div>
