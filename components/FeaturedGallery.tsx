@@ -6,6 +6,7 @@ export default function GalleryPage() {
   const basePath = '/images/gallery/featured/'
 
   const items = [
+    { id: 26, src: 'pinball_frame.jpg', title: 'Pinball Hideaway Frame' },
     { id: 1, src: 'hanging_lamp.jpg', title: 'Piece 1' },
     { id: 9, src: 'squidward1.jpg', title: 'Squidward\'s Tiki' },
     { id: 11, src: 'desk_lamp.jpg', title: 'Piece 11' },
@@ -19,14 +20,19 @@ export default function GalleryPage() {
   ]
 
   const tallSet = new Set([
-    "Squidward's Tiki",
+    'Pinball Hideaway Frame',
+    'Squidward\'s Tiki',
     'Long Tiki Face',
   ])
 
+  const wideSet = new Set([
+    'Pinball Hideaway Frame',
+  ])
+
   return (
-    <div className="max-w-6xl mx-auto px-4 pt-20">
+    <div className="max-w-6xl mx-auto px-4 pt-8 md:pt-20">
       
-      <h2 className="text-4xl font-bold text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-5 md:mb-16">
         Featured
       </h2>
 
@@ -34,6 +40,7 @@ export default function GalleryPage() {
         items={items}
         basePath={basePath}
         tallSet={tallSet}
+        wideSet={wideSet}
       />
 
       <div className="w-full flex justify-center mt-10">

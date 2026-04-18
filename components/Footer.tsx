@@ -3,7 +3,7 @@ import BrandIcon from './BrandIcon'
 
 export default function Footer() {
   return (
-    <footer className="bg-bg-primary mt-24">
+    <footer className="bg-bg-primary mt-10 md:mt-24">
       
       <div className="max-w-6xl mx-auto px-4 py-16 grid gap-20 md:grid-cols-4">
         
