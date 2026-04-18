@@ -25,13 +25,13 @@ export default function Header() {
         fixed top-0 left-0 w-full z-50 bg-gradient-to-b from-black/20 via-black/10 to-orange-900/10
         transition-[height,background-color,backdrop-filter] duration-300 ease-in-out
         bg-bg-elevated  backdrop-blur-md'
-        ${scrolled ? 'h-14' : 'h-20'}
+        ${scrolled ? 'h-24 md:h-14' : 'h-32 md:h-20'}
       `}
     >
-      <div className="w-full h-full flex items-center justify-between px-12 relative">
+      <div className="w-full h-full flex items-center justify-between mx-auto px-5 md:px-12">
         
         {/* Menu Button */}
-        <div className="flex justify-start">
+        <div className="flex items-center flex-shrink-0">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="group cursor-pointer p-2 rounded-md hover:bg-white/0"
@@ -68,7 +68,7 @@ export default function Header() {
             {/* Nav */}
             <div className="p-10 text-xl">
               <nav className="flex flex-col gap-4 opacity-80 mt-6">
-                <a href="/gallery" className="hover:text-orange-400 transition">Gallery</a>
+                <Link href="/gallery" className="hover:text-orange-400 transition">Gallery</Link>
                 <span className="opacity-50 cursor-default">Store (Coming Soon)</span>
                 <span className="opacity-50 cursor-default">Contact (Coming Soon)</span>
               </nav>
@@ -87,36 +87,41 @@ export default function Header() {
         )}
 
         {/* Center Logo */}
-        <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex flex-col items-center justify-center gap-1 leading-none">
-          <h1
-            className={`
-              font-bold tracking-wider leading-none transition-all duration-300
-              ${scrolled ? 'text-3xl' : 'text-4xl'}
-            `}
+        <div className="flex-1 flex justify-center">
+          <Link
+            href="/"
+            className="flex flex-col items-center leading-none text-center"
           >
-            FireLord Arts
-          </h1>
-          
-          <div
-            className={`
-              transition-all duration-300 ease-in-out
-              ${scrolled
-                ? 'opacity-0 -translate-y-2 max-h-0 scale-75 pointer-events-none'
-                : 'opacity-100 translate-y-0 max-h-10 scale-100 pointer-events-auto'}
-            `}
-          >
-            <h2 className="text-sm tracking-widest text-text-muted mt-0.5">
-              {"Handcrafted Decor".toLocaleUpperCase()}
-            </h2>
-          </div>
-        </Link>
+            <h1
+              className={`
+                font-bold tracking-wider leading-none transition-all duration-300
+                ${scrolled ? 'text-3xl md:text-3xl' : 'text-4xl md:text-4xl'}
+              `}
+            >
+              FireLord Arts
+            </h1>
+            
+            <div
+              className={`
+                transition-all duration-300 ease-in-out
+                ${scrolled
+                  ? 'opacity-0 -translate-y-2 max-h-0 scale-75 pointer-events-none'
+                  : 'opacity-100 translate-y-0 max-h-10 scale-100 pointer-events-auto'}
+              `}
+            >
+              <h2 className="text-sm md:text-sm tracking-widest text-text-muted mt-0.5">
+                {"Handcrafted Decor".toLocaleUpperCase()}
+              </h2>
+            </div>
+          </Link>
+        </div>
 
         {/* Right-Hand Icons */}
-        <div className="flex items-center gap-4">
+        <div className="hidden sm:flex items-center gap-4">
           <a
             href="https://www.instagram.com/firelord_arts/"
             target="_blank"
-            className="hover:text-orange-400 transition group"
+            className="hidden sm:block hover:text-orange-400 transition group"
           >
             <BrandIcon
               name="instagram"
@@ -127,7 +132,7 @@ export default function Header() {
           <a
             href="https://www.tiktok.com/@firelordthomas"
             target="_blank"
-            className="hover:text-orange-400 transition group"
+            className="hidden sm:block hover:text-orange-400 transition group"
           >
             <BrandIcon
               name="tiktok"
@@ -135,14 +140,20 @@ export default function Header() {
             />
           </a>
 
-          <a href="mailto:your@email.com" className="group">
+          <Link href="/contact" className="hidden sm:block group">
             <Mail className="w-5.5 h-5.5 group-hover:text-orange-400 transition" />
-          </a>
+          </Link>
 
-          <div className="relative group">
+          <div className="relative flex flex-col items-center group">
             <ShoppingBag className="w-5.5 h-5.5 opacity-30" />
+            
+            {/* Mobile Label */}
+            <span className="text-[10px] text-text-muted mt-1 sm:hidden">
+              Coming Soon
+            </span>
 
-            <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 text-xs text-text-muted opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+            {/* Desktop tooltip */}
+            <span className="hidden sm:block absolute top-full mt-2 left-1/2 -translate-x-1/2 text-xs text-text-muted opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
               Coming Soon
             </span>
           </div>
