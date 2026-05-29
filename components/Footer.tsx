@@ -37,11 +37,12 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <p
-                className="inline hover:text-orange-400 cursor-default transition"
+              <a
+                href="https://www.tiktok.com/@firelordarts.shop?_r=1&_t=ZP-96YNXCJlJaY"
+                className="hover:text-orange-400 transition"
               >
-                Shop (Coming Soon)
-              </p>
+                Shop
+              </a>
             </li>
             {/* <li><Link href="/about" className="hover:text-orange-400 transition">About</Link></li> */}
             {/* <li><Link href="/contact" className="hover:text-orange-400 transition">Contact</Link></li> */}

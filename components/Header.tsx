@@ -104,8 +104,13 @@ export default function Header() {
                 >
                   Contact
                 </a>
-                <span className="opacity-50 cursor-default">Store (Coming Soon)</span>
-                {/* <Link href="/contact" className="hover:text-orange-400 transition">Contact</Link> */}
+                <a
+                  href="https://www.tiktok.com/@firelordarts.shop?_r=1&_t=ZP-96YNXCJlJaY"
+                  // onClick={() => setMenuOpen(false)}
+                  className="hover:text-orange-400 transition"
+                >
+                  Store
+                </a>
               </nav>
             </div>
 
@@ -213,19 +218,21 @@ export default function Header() {
             <Mail className="w-5.5 h-5.5 group-hover:text-orange-400 transition" />
           </a>
 
-          <div className="relative flex flex-col items-center group">
+          <a href="https://www.tiktok.com/@firelordarts.shop?_r=1&_t=ZP-96YNXCJlJaY" className="relative flex flex-col items-center group">
+            <ShoppingBag className="w-5.5 h-5.5 group-hover:text-orange-400 transition" />
+          </a>
+
+          {/* <div className="relative flex flex-col items-center group">
             <ShoppingBag className="w-5.5 h-5.5 opacity-30" />
             
-            {/* Mobile Label */}
             <span className="text-[10px] text-text-muted mt-1 sm:hidden">
               Coming Soon
             </span>
 
-            {/* Desktop tooltip */}
             <span className="hidden sm:block absolute top-full mt-2 left-1/2 -translate-x-1/2 text-xs text-text-muted opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
               Coming Soon
             </span>
-          </div>
+          </div> */}
         </div>
 
       </div>
